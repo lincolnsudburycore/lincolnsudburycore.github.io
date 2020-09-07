@@ -1,67 +1,112 @@
+/* define color scheme */
+:root {
+  --beige: #E7D8BB;
+  --pink: #FEB2B7;
+  --aqua: #7ED7DD;
+  --orange: #FF6355;
+  --green: #195D43;
+  --navy: #045168;
+}
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body {
-    width: 100%;
-    height: 100vh;
-    background-color: #1A5F6F;
+#home {
+  background-color: var(--navy);
+  height: 1000px;
 }
 
 #logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: fill 0.5s ease forwards 3s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: move-logo 2s ease forwards 4s;
+  margin: 10px;
+}
+
+#logo-svg {
+  /* TODO: add fill animation back in */
+  /* animation: fill 1s ease forwards 3.5s; */
+  animation: resize-logo 2s ease forwards 4s;
 
 }
 
 #logo path:nth-child(1) {
-    stroke-dasharray: 298px;
-    stroke-dashoffset: 298px;
-    animation: line-anim 2s ease forwards;
+  stroke-dasharray: 298px;
+  stroke-dashoffset: 298px;
+  animation: line-anim 2s ease forwards;
 }
 #logo path:nth-child(2) {
-    stroke-dasharray: 494px;
-    stroke-dashoffset: 494px; 
-    animation: line-anim 2s ease forwards 0.3s;
-
+  stroke-dasharray: 494px;
+  stroke-dashoffset: 494px; 
+  animation: line-anim 2s ease forwards 0.3s;
 }
 #logo path:nth-child(3) {
-    stroke-dasharray: 509px;
-    stroke-dashoffset: 509px;
-    animation: line-anim 2s ease forwards 0.6s;
+  stroke-dasharray: 509px;
+  stroke-dashoffset: 509px;
+  animation: line-anim 2s ease forwards 0.6s;
 }
 #logo path:nth-child(4) {
-    stroke-dasharray: 566px;
-    stroke-dashoffset: 566px;    
-    animation: line-anim 2s ease forwards 0.9s;
+  stroke-dasharray: 566px;
+  stroke-dashoffset: 566px;    
+  animation: line-anim 2s ease forwards 0.9s;
 }
 #logo path:nth-child(5) {
-    stroke-dasharray: 550px;
-    stroke-dashoffset: 550px;    
-    animation: line-anim 2s ease forwards 1.2s;
+  stroke-dasharray: 550px;
+  stroke-dashoffset: 550px;    
+  animation: line-anim 2s ease forwards 1.2s;
 }
 #logo path:nth-child(6) {
-    stroke-dasharray: 464px;
-    stroke-dashoffset: 464px;  
-    animation: line-anim 2s ease forwards 1.5s;
+  stroke-dasharray: 464px;
+  stroke-dashoffset: 464px;  
+  animation: line-anim 2s ease forwards 1.5s;
 }
 
 @keyframes line-anim {
-    to {
-        stroke-dashoffset: 0;
-    }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 @keyframes fill {
-    from {
-        fill: transparent;
-    }
-    to {
-        fill: white;
-    }
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: white;
+  }
+}
+
+@keyframes move-logo {
+  to {
+    top: 0;
+    left: 0;
+    transform: translate(0%, 0%);
+  }
+}
+
+@keyframes resize-logo {
+  to {
+    height: 20%;
+    width: 20%;
+  }
+}
+
+#mission {
+  background-color: var(--orange);
+  height: 1000px;
+}
+
+#initiatives {
+  background-color: white;
+  height: 1000px;
+}
+
+#get-involved {
+  background-color: var(--pink);
+  height: 1000px;
 }
