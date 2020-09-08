@@ -8,10 +8,27 @@
   --navy: #045168;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
+  color: white;
+}
+
+h1 {
+  font-family: 'BioRhyme', serif;
+  font-size: 60px;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  width: 70%;
+  text-align: justify;
+  margin: 15px;
 }
 
 #home {
@@ -24,14 +41,14 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: move-logo 2s ease forwards 4s;
+  /* animation: move-logo 2s ease forwards 4s; */
   margin: 10px;
 }
 
 #logo-svg {
   /* TODO: add fill animation back in */
-  /* animation: fill 1s ease forwards 3.5s; */
-  animation: resize-logo 2s ease forwards 4s;
+  animation: fill 1s ease forwards 3.2s;
+  /* animation: resize-logo 2s ease forwards 4s; */
 
 }
 
@@ -99,6 +116,10 @@
 #mission {
   background-color: var(--orange);
   height: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #initiatives {
