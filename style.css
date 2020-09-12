@@ -12,6 +12,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -23,8 +24,12 @@ h1 {
   font-size: 60px;
 }
 
+h2 {
+  font-size: 40px;
+}
+
 p {
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
   font-size: 20px;
   width: 70%;
   text-align: justify;
@@ -47,7 +52,7 @@ p {
 
 #logo-svg {
   /* TODO: add fill animation back in */
-  animation: fill 1s ease forwards 3.2s;
+  animation: fill 1s ease forwards 3.1s;
   /* animation: resize-logo 2s ease forwards 4s; */
 
 }
@@ -130,4 +135,32 @@ p {
 #get-involved {
   background-color: var(--pink);
   height: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#buttons {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 60%;
+}
+
+.involvement-button {
+  background-color: var(--navy);
+  height: 300px;
+  width: 300px;
+  text-align: center;
+  margin: 50px;
+  line-height: 300px;
+  border-radius: 15px;
+  transition: opacity .8s;
+}
+
+.involvement-button:hover {
+  opacity: .8;
 }
